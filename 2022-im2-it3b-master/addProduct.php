@@ -2,11 +2,13 @@
     include "dbconnect.php";
 ?>
 
+<link rel="stylesheet" href="list.css">
+
+<div class = "title">Add Product</div>
 <form action="saveProduct.php" method="get">
-    <label for ="category">Choose a Category Name</label>
+    <label for ="category">Select a category name</label>
 
     <select name = "category" id = "category">
-
     <?php
 
         $sqlQuery = "SELECT * from category";
@@ -19,9 +21,9 @@
 
     <br>
 
-    <input type="text" placeholder="Enter Name" name="name">
+    <input type="text" placeholder="Enter name" name="name">
     <br>
-    <input type="text" placeholder="Enter Price" name="price">
+    <input type="text" placeholder="Enter price" name="price">
     <br>
-    <input type="submit">
+    <input type="submit" class = "btn">
 </form>

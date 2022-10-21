@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2022 at 07:07 PM
+-- Generation Time: Oct 21, 2022 at 06:04 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -38,12 +38,12 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `status`) VALUES
-(2, 'Cellphone', 'Not Available'),
+(2, 'Cellphone', 'N/A'),
 (3, 'Clothes', 'Available'),
 (4, 'Shoes', 'Available'),
-(18, 'Jewelry', 'Not Available'),
-(23, 'Laptop', 'Available'),
-(24, 'Kitchen Utencils', 'Available');
+(18, 'Jewelry', 'N/A'),
+(23, 'Laptop', 'N/A'),
+(26, 'Utencils', 'Available');
 
 -- --------------------------------------------------------
 
@@ -63,13 +63,12 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `category`, `name`, `price`) VALUES
-(1, '2', 'Vivo', '12'),
-(2, '2', 'Vivo', '12'),
-(3, '4', 'Nike', '390'),
-(4, '4', 'Nike', '390'),
+(1, '2', 'Oppo', '9000'),
+(2, '2', 'Vivo', '12999'),
+(4, '4', 'Jordan', '1300'),
 (5, '18', 'Ring', '9270'),
-(6, '3', 'Pants', '250'),
-(7, '23', 'HP', '16');
+(7, '23', 'HP', '16900'),
+(8, '3', 'Oversized', '299');
 
 --
 -- Indexes for dumped tables
@@ -95,13 +94,13 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

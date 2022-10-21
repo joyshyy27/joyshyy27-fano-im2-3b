@@ -16,20 +16,21 @@
         $res = $conn->query($sqlQuery);
 
         if($res)
-            header("Location: index.php");
+            header("Location: categoryList.php");
     }
 ?>
 
-<link rel="stylesheet" href="update.css">
+<link rel="stylesheet" href="list.css">
 
+<div class = "title">Update Category</div>
 <form action="" method="post">
     <input type="text" placeholder="Enter Category name" 
-        name="name" 
-        value="<?php echo $row['name']?>">
+           name="name" 
+           value="<?php echo $row['name']?>">
     <br>
     <input type="text" placeholder="Enter category status" 
-        name="status" 
-        value="<?php echo $row['status']?>">
+           name="status" 
+           value="<?php echo $row['status']?>">
     <br>
-    <input type="submit">
+    <input type="submit" class = "btn">
 </form>

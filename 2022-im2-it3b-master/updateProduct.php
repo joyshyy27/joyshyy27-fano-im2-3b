@@ -9,10 +9,9 @@
     $row = $res->fetch_assoc();
 
     if($_POST){
-        $prodCat = $_POST['category'];
         $prodName = $_POST['name'];
         $prodPrice = $_POST['price'];
-        $sqlQuery = "UPDATE product set category = '$prodCat' name = '$prodName', price ='$prodPrice' where id = $prodID ";
+        $sqlQuery = "update product set name = '$prodName', price ='$prodPrice' where id = $prodID ";
         
         $res = $conn->query($sqlQuery);
 
@@ -21,28 +20,17 @@
     }
 ?>
 
+<link rel="stylesheet" href="list.css">
+
+<div class = "title">Update Product</div>
 <form action="" method="post">
-    <label for ="category">Select a Category Name</label>
-    <select name = "category" id = "category">
-<!-- 
-    <?php
-
-        $sqlQuery = "SELECT * from category";
-        $res = $conn->query($sqlQuery);
-
-        while($row = mysqli_fetch_object($res)){
-            echo "<option value =\"$row->id\">$row->name<option>";
-        }
-    ?></select> -->
-
-
     <input type="text" placeholder="Enter Product Name" 
-        name="name" 
-        value="<?php echo $row['name']?>">
+           name="name" 
+           value="<?php echo $row['name']?>">
     <br>
     <input type="text" placeholder="Enter Product Price" 
-        name="price" 
-        value="<?php echo $row['price']?>">
+           name="price" 
+           value="<?php echo $row['price']?>">
     <br>
-    <input type="submit">
+    <input type="submit" class = "btn">
 </form>

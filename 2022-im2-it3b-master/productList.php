@@ -1,15 +1,9 @@
 <?php
     require_once "dbconnect.php";
 ?>
-<style>
-    table, th, td {
-        border: 2px solid black;
-        border-collapse: collapse;
-    }
-</style>
 
-<h4>Product List</h4>
-
+<link rel="stylesheet" href="list.css">
+<div class = "title">Product List</div>
 <table>
     <tr>
         <th>ID</th>
@@ -31,12 +25,14 @@
                 <td><?php echo $row->name?></td>
                 <td><?php echo $row->price?></td>
                 <td>
-                    <a class="add" href="addProduct.php?id=<?php echo $row->id?>">Add</a>
                     <a class="upd" href="updateProduct.php?id=<?php echo $row->id?>">Update</a>
                     <a class="del" href="deleteProduct.php?id=<?php echo $row->id?>">Delete</a></td>
     </tr>
     <?php
         }   
     ?>
-
+    <div>
+        <a class="add" href="addProduct.php">Add Product</a>
+    </div>
+    <br>
 </table>

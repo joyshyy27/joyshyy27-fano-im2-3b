@@ -7,6 +7,6 @@
     $res = $conn->query($sqlQuery);
 
     if($res){
-        header("Location: index.php");
+        header("Location: categoryList.php");
     }
 ?>
